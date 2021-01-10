@@ -36,10 +36,9 @@ export async function getUserBorrowData(req: Request, res: Response) {
             liquidationQuery = USER_LIQUIDATION.replace(/##user_address##/g, userId);
         else {
             liquidationQuery = USER_RESERVE_LIQUIDATION.replace(/##user_address##/g, userId);
-            liquidationQuery = liquidationQuery.replace(/"##reserve_address##"/g, reserveId);
+            liquidationQuery = liquidationQuery.replace(/##reserve_address##/g, reserveId);
         }
         userLiquidations = await getConnection().query(liquidationQuery);
-
         const userCurrentState = !reserveId ?
             await getUserCurrentState(userId) :
             await getUserCurrentStateByReserve(userId, reserveId);
@@ -54,6 +53,6 @@ export async function getUserBorrowData(req: Request, res: Response) {
     }
     catch(err) {
         console.log(err);
-        return res.status(500).json({error: err});
+        return   res.status(500).json({error: err});
     }
 }

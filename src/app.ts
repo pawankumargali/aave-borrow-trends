@@ -24,7 +24,7 @@ app.listen(PORT, () => console.log(`Listening on Port ${PORT}`));
 
 app.get('/', (req: Request, res: Response) => res.json({status:'Running'}));
 
-app.use('/borrow/', borrowRouter);
+app.use('/api/borrow/', borrowRouter);
 
 
 const  _delayedFunctionCall = async (func: Function,  delay: number) => setTimeout(() => func(), delay)

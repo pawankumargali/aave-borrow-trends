@@ -61,4 +61,4 @@ export const USER_RESERVE_LIQUIDATION = `select
     where 
         txn.user_address='##user_address##'
     and 
-    reserve = '##reserve_address##';`
+        liquidation_call.reserve = '##reserve_address##';`
