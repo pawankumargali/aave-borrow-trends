@@ -6,7 +6,7 @@ API returns aave borrow history of particular user from Jan 2020 to present
 1. <b>/api/borrow/:userId?key={API_KEY} </b>
 Returns borrow history of given user address
 <b>Example Response</b>
-/api/borrow/0xa25A9b7c73158B3B34215925796Ce6Aa8100C13a?key={API_KEY}
+/api/borrow/0xa25A9b7c73158B3B34215925796Ce6Aa8100C13a?key={API_KEY}<br/>
 <code>{
 		&nbsp; &nbsp; &nbsp;liquidation_history: [{
 			&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;"id": "792206","time_stamp": "1608762401000",
@@ -38,7 +38,7 @@ Returns borrow history of given user address
 2. <b>/api/borrow/:userId?reserveId={reserveId}&key={API_KEY} </b>
 Returns borrow history of given user address
 <b>Example Response</b>
-/api/borrow/0xa25A9b7c73158B3B34215925796Ce6Aa8100C13a?reserveId=0x6B175474E89094C44Da98b954EedeAC495271d0F&key={API_KEY}
+/api/borrow/0xa25A9b7c73158B3B34215925796Ce6Aa8100C13a?reserveId=0x6B175474E89094C44Da98b954EedeAC495271d0F&key={API_KEY}<br/>
 <code>{
 		&nbsp; &nbsp; &nbsp;liquidation_history: [{
 			&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;"id": "792212","time_stamp": "1608762487000",
