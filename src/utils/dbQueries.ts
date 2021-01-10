@@ -51,7 +51,7 @@ export const USER_LIQUIDATION = `select
     from 
         txn inner join liquidation_call on txn.tx_hash=liquidation_call.id 
     where 
-        txn.user_address='##user_address##';`
+        txn.user_address='##user_address##' order by txn.time_stamp asc;`
 
 export const USER_RESERVE_LIQUIDATION = `select 
         txn.id, txn.time_stamp,  txn.tx_hash, txn.tx_type, liquidation_call.reserve,
@@ -61,4 +61,4 @@ export const USER_RESERVE_LIQUIDATION = `select
     where 
         txn.user_address='##user_address##'
     and 
-        liquidation_call.reserve = '##reserve_address##';`
+        liquidation_call.reserve = '##reserve_address##' order by txn.time_stamp asc;`
